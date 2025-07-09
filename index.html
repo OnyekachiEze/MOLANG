@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOLANG on Bonk</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Chewy', cursive;
+        background: linear-gradient(135deg, #fff1f9 0%, #d0f4ff 100%);
+      }
+    </style>
+  </head>
+  <body class="text-gray-800">
+    <!-- Hero Section -->
+    <section class="text-center py-16 px-4">
+      <img
+        src="./molang_banner.png"
+        alt="Molang Banner"
+        class="mx-auto max-w-xl mb-6 rounded-lg shadow-xl"
+      />
+      <h1 class="text-4xl md:text-6xl text-pink-600">MOLANG on Bonk</h1>
+      <p class="mt-6 max-w-2xl mx-auto text-lg">
+        The cute and popular bunny, Molang is coming to live on Solana. A wholesome,
+        community-driven memecoin inspired by Molang’s mini series, the adorable round bunny
+        who spreads joy and positivity everywhere.
+      </p>
+      <p class="mt-4 text-xl font-semibold text-pink-700">
+        $MOLANG is here to deliver pure good vibes, cuteness, and collective wins.
+      </p>
+      <p class="mt-2 text-sm">
+        Because sometimes you don’t need utility—just good vibes, a cute mascot, and a reminder to
+        stay soft and happy while your bags go up.
+      </p>
+      <button
+        onclick="document.getElementById('presaleModal').classList.remove('hidden')"
+        class="mt-8 px-6 py-3 bg-pink-600 text-white rounded-full hover:bg-pink-500"
+      >
+        Join Presale
+      </button>
+    </section>
+
+    <!-- Mascot Image -->
+    <section class="text-center">
+      <img
+        src="./molang_mascot.png"
+        alt="Molang Mascot"
+        class="mx-auto w-40 h-40 rounded-full border-4 border-pink-300 shadow-md"
+      />
+    </section>
+
+    <!-- Tokenomics -->
+    <section class="py-16 px-6">
+      <h2 class="text-3xl text-center text-purple-600 mb-8">Tokenomics</h2>
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+        <div class="p-6 bg-white rounded-lg shadow">
+          <h3 class="text-xl text-pink-500">Total Supply</h3>
+          <p class="text-lg">1,000,000,000 $MOLANG</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow">
+          <h3 class="text-xl text-pink-500">Liquidity</h3>
+          <p class="text-lg">80% Locked Forever</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow">
+          <h3 class="text-xl text-pink-500">Team</h3>
+          <p class="text-lg">5% (Vested over 6 months)</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow">
+          <h3 class="text-xl text-pink-500">Marketing</h3>
+          <p class="text-lg">15% Community Campaigns</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meme/Lore Slider -->
+    <section class="bg-pink-50 py-16">
+      <h2 class="text-3xl text-center text-pink-700 mb-8">Lore & Meme Moments</h2>
+      <div class="overflow-x-auto flex gap-6 px-6">
+        <div class="min-w-[250px] bg-white p-4 rounded shadow">🥕 Molang found Bonk treats!</div>
+        <div class="min-w-[250px] bg-white p-4 rounded shadow">🌈 Rainbow mode activated</div>
+        <div class="min-w-[250px] bg-white p-4 rounded shadow">🕶 Cool bunny in full send</div>
+        <div class="min-w-[250px] bg-white p-4 rounded shadow">🚀 $MOLANG hits new ATH!</div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-200 text-center py-8">
+      <h3 class="text-xl mb-4">Join the Vibe</h3>
+      <div class="flex justify-center gap-6">
+        <a href="#" class="hover:text-pink-600">Twitter/X</a>
+        <a href="#" class="hover:text-pink-600">Telegram</a>
+        <a href="#" class="hover:text-pink-600">Discord</a>
+      </div>
+    </footer>
+
+    <!-- Presale Modal -->
+    <div
+      id="presaleModal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+    >
+      <div class="bg-white p-8 rounded-lg w-full max-w-md relative">
+        <button
+          onclick="document.getElementById('presaleModal').classList.add('hidden')"
+          class="absolute top-2 right-3 text-xl"
+        >
+          &times;
+        </button>
+        <h2 class="text-2xl mb-4">Presale Now Live!</h2>
+        <p class="mb-4">
+          Buy $MOLANG on Uniswap using Solana Wallet. Presale ends soon — grab your cute bags!
+        </p>
+        <a
+          href="https://uniswap.org/"
+          target="_blank"
+          class="inline-block bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-500"
+        >
+          Go to Presale
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
