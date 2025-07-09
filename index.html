@@ -4,132 +4,160 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MOLANG on Bonk</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
         font-family: 'Chewy', cursive;
         background: linear-gradient(135deg, #fff1f9 0%, #d0f4ff 100%);
       }
+
+      @keyframes fade-in-up {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in-up {
+        animation: fade-in-up 0.8s ease-out forwards;
+      }
+
+      .animate-fade-in {
+        animation: fade-in-up 1s ease-out forwards;
+      }
+
+      .delay-200 {
+        animation-delay: 0.2s;
+      }
+
+      .delay-300 {
+        animation-delay: 0.3s;
+      }
+
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
     </style>
   </head>
   <body class="text-gray-800">
-    <!-- Hero Section -->
-    <section class="text-center py-12 px-4 md:py-20">
-      <img
-        src="./molang_banner.png"
-        alt="Molang Banner"
-        class="mx-auto w-full max-w-3xl mb-6 rounded-lg shadow-xl"
-      />
-      <h1 class="text-4xl md:text-6xl text-pink-600">MOLANG on Bonk</h1>
-      <p class="mt-6 max-w-2xl mx-auto text-base sm:text-lg">
-        The cute and popular bunny, Molang is coming to live on Solana. A wholesome,
-        community-driven memecoin inspired by Molang’s mini series, the adorable round bunny
-        who spreads joy and positivity everywhere.
-      </p>
-      <p class="mt-4 text-lg sm:text-xl font-semibold text-pink-700">
-        $MOLANG is here to deliver pure good vibes, cuteness, and collective wins.
-      </p>
-      <p class="mt-2 text-sm max-w-xl mx-auto px-2">
-        Because sometimes you don’t need utility—just good vibes, a cute mascot, and a reminder to
-        stay soft and happy while your bags go up.
-      </p>
-      <button
-        onclick="document.getElementById('presaleModal').classList.remove('hidden')"
-        class="mt-8 px-6 py-3 bg-pink-600 text-white rounded-full hover:bg-pink-500 transition"
-      >
-        Join Presale
-      </button>
+    <!-- HERO SECTION -->
+    <section class="relative bg-gradient-to-br from-amber-50 via-yellow-50 to-blue-100 py-24 px-6 text-center overflow-hidden">
+      <div class="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-amber-300 opacity-20 rounded-full blur-3xl animate-pulse z-0"></div>
+      <div class="absolute bottom-[-80px] right-[-80px] w-[250px] h-[250px] bg-yellow-300 opacity-20 rounded-full blur-3xl animate-pulse z-0"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto animate-fade-in-up">
+        <img
+          src="./molang_banner.png"
+          alt="Molang Banner"
+          class="mx-auto w-full max-w-3xl mb-8 rounded-3xl shadow-2xl border-4 border-white"
+        />
+
+        <h1 class="text-6xl sm:text-7xl md:text-8xl font-extrabold text-amber-600 drop-shadow-xl leading-tight">
+          MOLANG on Bonk
+        </h1>
+
+        <p class="mt-6 text-xl sm:text-2xl max-w-3xl mx-auto text-gray-700 animate-fade-in delay-200">
+          The cute and popular bunny, Molang, is coming to live on Solana.
+          A wholesome, community-driven memecoin inspired by Molang’s mini series —
+          the adorable round bunny who spreads joy, positivity, and pure good vibes.
+        </p>
+
+        <p class="mt-4 text-lg sm:text-xl max-w-2xl mx-auto text-gray-600 animate-fade-in delay-300">
+          $MOLANG is here to deliver cuteness, smiles, and collective wins.
+          Sometimes you don’t need utility—just a soft mascot, viral vibes,
+          and a reason to stay happy while your bags go up.
+        </p>
+      </div>
     </section>
 
     <!-- Mascot Image -->
-    <section class="text-center mb-12">
+    <section class="text-center mb-16 animate-fade-in-up">
       <img
         src="./molang_mascot.png"
         alt="Molang Mascot"
-        class="mx-auto w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-pink-300 shadow-md"
+        class="mx-auto w-36 h-36 sm:w-44 sm:h-44 rounded-full border-8 border-amber-400 shadow-xl"
       />
     </section>
 
     <!-- Tokenomics -->
-    <section class="py-16 px-4 sm:px-6">
-      <h2 class="text-3xl text-center text-purple-600 mb-8">Tokenomics</h2>
-      <div class="max-w-5xl mx-auto grid gap-6 sm:grid-cols-2">
-        <div class="p-6 bg-white rounded-lg shadow text-center">
-          <h3 class="text-xl text-pink-500">Total Supply</h3>
-          <p class="text-lg">1,000,000,000 $MOLANG</p>
+    <section class="py-20 px-4 sm:px-6 bg-white">
+      <h2 class="text-4xl text-center text-amber-600 font-bold mb-12">Tokenomics</h2>
+      <div class="max-w-6xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="p-6 bg-amber-50 rounded-2xl shadow-xl border border-amber-200">
+          <h3 class="text-2xl text-amber-500">Total Supply</h3>
+          <p class="text-lg mt-2 font-semibold">1,000,000,000 $MOLANG</p>
         </div>
-        <div class="p-6 bg-white rounded-lg shadow text-center">
-          <h3 class="text-xl text-pink-500">Liquidity</h3>
-          <p class="text-lg">80% Locked Forever</p>
+        <div class="p-6 bg-amber-50 rounded-2xl shadow-xl border border-amber-200">
+          <h3 class="text-2xl text-amber-500">Liquidity</h3>
+          <p class="text-lg mt-2 font-semibold">80% Locked Forever</p>
         </div>
-        <div class="p-6 bg-white rounded-lg shadow text-center">
-          <h3 class="text-xl text-pink-500">Team</h3>
-          <p class="text-lg">5% (Vested over 6 months)</p>
+        <div class="p-6 bg-amber-50 rounded-2xl shadow-xl border border-amber-200">
+          <h3 class="text-2xl text-amber-500">Team</h3>
+          <p class="text-lg mt-2 font-semibold">5% (Vested over 6 months)</p>
         </div>
-        <div class="p-6 bg-white rounded-lg shadow text-center">
-          <h3 class="text-xl text-pink-500">Marketing</h3>
-          <p class="text-lg">15% Community Campaigns</p>
+        <div class="p-6 bg-amber-50 rounded-2xl shadow-xl border border-amber-200">
+          <h3 class="text-2xl text-amber-500">Marketing</h3>
+          <p class="text-lg mt-2 font-semibold">15% Community Campaigns</p>
         </div>
       </div>
     </section>
 
     <!-- Meme/Lore Slider -->
-    <section class="bg-pink-50 py-16 px-4">
-      <h2 class="text-3xl text-center text-pink-700 mb-8">Lore & Meme Moments</h2>
-      <div class="overflow-x-auto flex gap-4 sm:gap-6 px-2 sm:px-6 scrollbar-hide">
-        <div class="min-w-[200px] sm:min-w-[250px] bg-white p-4 rounded shadow text-center">
+    <section class="bg-yellow-50 py-20 px-4">
+      <h2 class="text-4xl text-center text-amber-700 font-bold mb-10">Lore & Meme Moments</h2>
+      <div class="overflow-x-auto flex gap-6 px-4 sm:px-8 scrollbar-hide">
+        <div class="min-w-[220px] bg-white p-6 rounded-xl shadow-lg text-center font-semibold text-lg">
           🥕 Molang found Bonk treats!
         </div>
-        <div class="min-w-[200px] sm:min-w-[250px] bg-white p-4 rounded shadow text-center">
+        <div class="min-w-[220px] bg-white p-6 rounded-xl shadow-lg text-center font-semibold text-lg">
           🌈 Rainbow mode activated
         </div>
-        <div class="min-w-[200px] sm:min-w-[250px] bg-white p-4 rounded shadow text-center">
+        <div class="min-w-[220px] bg-white p-6 rounded-xl shadow-lg text-center font-semibold text-lg">
           🕶 Cool bunny in full send
         </div>
-        <div class="min-w-[200px] sm:min-w-[250px] bg-white p-4 rounded shadow text-center">
+        <div class="min-w-[220px] bg-white p-6 rounded-xl shadow-lg text-center font-semibold text-lg">
           🚀 $MOLANG hits new ATH!
         </div>
       </div>
     </section>
 
+    <!-- Molang Moments Gallery -->
+    <section class="py-20 px-4 bg-white">
+      <h2 class="text-4xl text-center text-amber-600 font-bold mb-12">Molang Moments</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="rounded-2xl overflow-hidden shadow-2xl">
+          <img src="./molang_1.jpg" alt="Molang sipping tea" class="w-full h-auto object-cover" />
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-2xl">
+          <img src="./molang_2.jpg" alt="Molang walking through a green portal" class="w-full h-auto object-cover" />
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-2xl">
+          <img src="./molang_3.jpg" alt="Molang falling at night" class="w-full h-auto object-cover" />
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-2xl">
+          <img src="./molang_4.jpeg" alt="Molang with green sticks in forest" class="w-full h-auto object-cover" />
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="bg-pink-200 text-center py-10 px-4">
-      <h3 class="text-xl mb-4">Join the Vibe</h3>
-      <div class="flex flex-wrap justify-center gap-4 sm:gap-6 text-base">
-        <a href="#" class="hover:text-pink-600">Twitter/X</a>
-        <a href="#" class="hover:text-pink-600">Telegram</a>
-        <a href="#" class="hover:text-pink-600">Discord</a>
+    <footer class="bg-amber-300 text-center py-12 px-6">
+      <h3 class="text-2xl font-bold text-gray-800 mb-6">Join the Vibe</h3>
+      <div class="flex flex-wrap justify-center gap-6 text-lg font-semibold">
+        <a href="#" class="hover:text-amber-800 transition">Twitter/X</a>
+        <a href="#" class="hover:text-amber-800 transition">Telegram</a>
+        <a href="#" class="hover:text-amber-800 transition">Discord</a>
       </div>
     </footer>
-
-    <!-- Presale Modal -->
-    <div
-      id="presaleModal"
-      class="hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4"
-    >
-      <div class="bg-white w-full max-w-md p-6 sm:p-8 rounded-lg relative shadow-lg">
-        <button
-          onclick="document.getElementById('presaleModal').classList.add('hidden')"
-          class="absolute top-2 right-3 text-2xl text-gray-600 hover:text-gray-800"
-        >
-          &times;
-        </button>
-        <h2 class="text-2xl mb-4 text-center">Presale Now Live!</h2>
-        <p class="mb-4 text-center">
-          Buy $MOLANG on Uniswap using Solana Wallet. Presale ends soon — grab your cute bags!
-        </p>
-        <a
-          href="https://uniswap.org/"
-          target="_blank"
-          class="block text-center bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-500 transition"
-        >
-          Go to Presale
-        </a>
-      </div>
-    </div>
   </body>
 </html>
